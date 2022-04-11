@@ -1,6 +1,5 @@
 snippet #!
 	#!/usr/bin/env Rscript
-
 # includes
 snippet lib
 	library(${0:package})
@@ -8,7 +7,6 @@ snippet req
 	require(${0:package})
 snippet source
 	source('${0:file}')
-
 # conditionals
 snippet if
 	if (${1:condition}) {
@@ -22,7 +20,6 @@ snippet ei
 	else if (${1:condition}) {
 		${0}
 	}
-
 # loops
 snippet wh
 	while(${1}) {
@@ -36,7 +33,6 @@ snippet foreach
 	foreach (${1:item} = ${2:list}) {
 		${3}
 	}
-
 # functions
 snippet fun
 	${1:name} <- function (${2:variables}) {
@@ -44,7 +40,6 @@ snippet fun
 	}
 snippet ret
 	return(${0})
-
 # dataframes, lists, etc
 snippet df
 	${1:name}[${2:rows}, ${0:cols}]
@@ -54,7 +49,6 @@ snippet li
 	list(${0:items})
 snippet mat
 	matrix(${1:data}, nrow = ${2:rows}, ncol = ${0:cols})
-
 # apply functions
 snippet apply
 	apply(${1:array}, ${2:margin}, ${0:function})
@@ -70,7 +64,6 @@ snippet tapply
 	tapply(${1:vector}, ${2:index}, ${0:function})
 snippet rapply
 	rapply(${1:list}, ${0:function})
-
 # plyr functions
 snippet dd
 	ddply(${1:frame}, ${2:variables}, ${0:function})
@@ -80,7 +73,6 @@ snippet da
 	daply(${1:frame}, ${2:variables}, ${0:function})
 snippet d_
 	d_ply(${1:frame}, ${2:variables}, ${0:function})
-
 snippet ad
 	adply(${1:array}, ${2:margin}, ${0:function})
 snippet al
@@ -89,7 +81,6 @@ snippet aa
 	aaply(${1:array}, ${2:margin}, ${0:function})
 snippet a_
 	a_ply(${1:array}, ${2:margin}, ${0:function})
-
 snippet ld
 	ldply(${1:list}, ${0:function})
 snippet ll
@@ -98,7 +89,6 @@ snippet la
 	laply(${1:list}, ${0:function})
 snippet l_
 	l_ply(${1:list}, ${0:function})
-
 snippet	md
 	mdply(${1:matrix}, ${0:function})
 snippet	ml
@@ -107,7 +97,6 @@ snippet	ma
 	maply(${1:matrix}, ${0:function})
 snippet	m_
 	m_ply(${1:matrix}, ${0:function})
-
 # plot functions
 snippet pl
 	plot(${1:x}, ${0:y})
@@ -117,7 +106,6 @@ snippet img
 	${1:(jpeg,bmp,png,tiff)}(filename = '${2:filename}', width = ${3}, height = ${4}, unit = '${5}')
 	${0:plot}
 	dev.off()
-
 # statistical test functions
 snippet fis
 	fisher.test(${1:x}, ${0:y})
